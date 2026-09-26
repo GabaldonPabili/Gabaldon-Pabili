@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gabaldon Pabili</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="main-content">
+    <header>
+      <div class="wrap header-inner">
+        <div class="brand">
+          <span>Gabaldon PaBili</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#home" data-en="Home" data-fil="Home">Home</a>
+          <a href="#paano-gumagana" data-en="How it Works" data-fil="Paano Gumagana">Paano Gumagana</a>
+          <a href="#mga-paninda" data-en="Catalog" data-fil="Mga Paninda">Mga Paninda</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-lang" onclick="toggleLang()" id="langBtn">EN / FIL</button>
+          <button class="btn-cart" title="Cart">🛒<span class="cart-badge">0</span></button>
+          <button class="btn-login" data-en="Login" data-fil="Mag-login">Mag-login</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1 data-en="Fresh from Gabaldon market, straight to your home" data-fil="Sariwa mula sa pamilihan ng Gabaldon, diretso sa bahay niyo">Sariwa mula sa pamilihan ng Gabaldon, diretso sa bahay niyo</h1>
+          <p data-en="Order products online. The first available rider will pick it up and deliver it — just pay cash on delivery." data-fil="Mag-order ng produkto online. Ang unang libreng rider ang kukuha at maghahatid — bayad na lang pag-dating.">Mag-order ng produkto online. Ang unang libreng rider ang kukuha at maghahatid — bayad na lang pag-dating.</p>
+          <button class="btn-primary" onclick="document.getElementById('mga-paninda').scrollIntoView()" data-en="Order Now" data-fil="Mag-order Na">Mag-order Na</button>
+        </div>
+        <div class="hero-image-placeholder">
+          <img src="rider.jpg" alt="Gabaldon PaBili Hero">
+        </div>
+      </div>
+    </section>
+
+    <section id="paano-gumagana" class="how-it-works wrap">
+      <h2 data-en="How does it work?" data-fil="Paano Gumagana?">Paano Gumagana?</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <h3 data-en="Pick your order" data-fil="Pumili ng order">Pumili ng order</h3>
+          <p data-en="Choose your order from the list." data-fil="Pumili ng order mula sa listahan.">Pumili ng order mula sa listahan.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <h3 data-en="First rider gets it" data-fil="Unang kukuha, siya na">Unang kukuha, siya na</h3>
+          <p data-en="The first available rider will deliver it." data-fil="Ang unang libreng rider ang maghahatid.">Ang unang libreng rider ang maghahatid.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <h3 data-en="Pay on delivery" data-fil="Bayad pag-dating ng pinabili mo">Bayad pag-dating ng pinabili mo</h3>
+          <p data-en="Simply pay cash when it arrives." data-fil="Bayad pag-dating ang sistema natin.">Bayad pag-dating ng mga aytem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mga-paninda" class="catalog wrap">
+      <h2 data-en="Available Today" data-fil="Available Ngayon">Available Ngayon</h2>
+      
+      <div class="catalog-controls">
+        <input type="text" class="search-bar" placeholder="Maghanap ng paninda..." id="searchInput">
+        <div class="categories">
+          <button class="btn-cat" data-en="All" data-fil="Lahat">Lahat</button>
+          <button class="btn-cat" data-en="Vegetables" data-fil="Gulay">Gulay</button>
+          <button class="btn-cat" data-en="Condiments" data-fil="Pampalasa">Pampalasa</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        
+        <div class="product-card">
+          <span style="position: absolute; top: 10px; left: 10px; background: #e74c3c; color: white; padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; z-index: 1;" data-en="Bestseller" data-fil="Mabenta">Mabenta</span>
+          <div style="height: 120px; border-radius: 8px; overflow: hidden; margin-bottom: 5px;">
+            <img src="kamatis.jpg" alt="Kamatis" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <h3 data-en="Tomato" data-fil="Kamatis">Kamatis</h3>
+          <p class="price" id="display-price-kamatis">₱40.00 / kg</p>
+          <button class="btn-add" data-en="Add" data-fil="Idagdag">Idagdag</button>
+        </div>
+
+        <div class="product-card">
+          <span style="position: absolute; top: 10px; left: 10px; background: #2b7a0b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; z-index: 1;" data-en="Fresh" data-fil="Bagong Ani">Bagong Ani</span>
+          <div style="height: 120px; border-radius: 8px; overflow: hidden; margin-bottom: 5px;">
+            <img src="pechay.png" alt="Pechay" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <h3 data-en="Pak choi" data-fil="Pechay">Pechay</h3>
+          <p class="price" id="display-price-pechay">₱30.00 / tali</p>
+          <button class="btn-add" data-en="Add" data-fil="Idagdag">Idagdag</button>
+        </div>
+
+        <div class="product-card">
+          <div style="height: 120px; border-radius: 8px; overflow: hidden; margin-bottom: 5px;">
+            <img src="siligreen.png" alt="Siligreen" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <h3 data-en="Finger Chili" data-fil="Siling Panigang">Siling Panigang</h3>
+          <p class="price" id="display-price-sili">₱80.00 / kg</p>
+          <button class="btn-add" data-en="Add" data-fil="Idagdag">Idagdag</button>
+        </div>
+
+        <div class="product-card">
+          <div style="height: 120px; border-radius: 8px; overflow: hidden; margin-bottom: 5px;">
+            <img src="sukatoyokamatius.png" alt="Suka,Toyo,Patis" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <h3 data-en="The Holy Trinity" data-fil="Suka, Toyo, Patis">Suka, Toyo, Patis</h3>
+          <p class="price" id="display-price-trinity">₱45.00 / set</p>
+          <button class="btn-add" data-en="Add" data-fil="Idagdag">Idagdag</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="wrap rider-banner">
+      <h2 data-en="Become a Partner Rider" data-fil="Maging Rider Namin">Maging Rider Namin</h2>
+      <p data-en="Got a motorcycle? Help deliver fresh goods around Gabaldon and earn extra income!" data-fil="May motor ka ba? Tulungan kaming maghatid ng sariwang paninda sa Gabaldon at kumita!">May motor ka ba? Tulungan kaming maghatid ng sariwang paninda sa Gabaldon at kumita!</p>
+      <button class="btn-primary" style="margin-top: 20px;" data-en="Apply Now" data-fil="Mag-apply Ngayon">Mag-apply Ngayon</button>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-info">
+          <div>
+            <h4 data-en="Contact Us" data-fil="Tawagan Kami" style="margin-bottom: 10px;">Tawagan Kami</h4>
+            <p style="margin: 5px 0; font-size: 0.9rem;">📞 09639923498</p>
+            <p style="margin: 5px 0; font-size: 0.9rem;">📍 Gabaldon Public Market, Nueva Ecija</p>
+          </div>
+          <div>
+            <h4 data-en="Store Hours" data-fil="Oras ng Tindahan" style="margin-bottom: 10px;">Oras ng Tindahan</h4>
+            <p data-en="Open Daily: 5:00 AM - 6:00 PM" data-fil="Bukas Araw-araw: 05:00 AM - 06:00 PM" style="margin: 5px 0; font-size: 0.9rem;">Bukas Araw-araw: 05:00 AM - 06:00 PM</p>
+          </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #ddd; padding-top: 20px;">
+          <p style="font-size: 0.8rem; color: #666; cursor: pointer; display: inline-block;" onclick="openAdminLogin()">© 2026 Gabaldon PaBili beta</p>
+          <p style="font-size: 0.8rem; color: #666; display: inline-block;">. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-box">
+      <h2 style="color: #2e7d32; margin-top: 0;">Admin Access</h2>
+      <p style="font-size: 14px; color: #666; margin-bottom: 20px;">I-verify ang iyong pagkakakilanlan</p>
+      <input type="text" id="adminUser" class="modal-input" placeholder="User ID">
+      <input type="password" id="adminPass" class="modal-input" placeholder="Password">
+      <div style="margin-top: 20px; display: flex; gap: 10px;">
+        <button onclick="closeAdminLogin()" style="flex: 1; padding: 12px; border: none; border-radius: 8px; cursor: pointer; background: #eee;">Cancel</button>
+        <button onclick="verifyAdmin()" style="flex: 1; padding: 12px; border: none; border-radius: 8px; cursor: pointer; background: #2b7a0b; color: white; font-weight: bold;">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="admin-dashboard">
+    <div class="admin-container">
+      <button class="btn-logout" onclick="logoutAdmin()">Logout</button>
+      <h2 style="color: #2e7d32; margin-top: 0;">Gabaldon PaBili - Admin</h2>
+      
+      <h3 style="margin-top: 30px;">1. Kontrolin ang Presyo</h3>
+      <div class="table-responsive">
+        <table class="admin-table">
+          <tr>
+            <th>Produkto</th>
+            <th>Kasalukuyang Presyo</th>
+            <th>Baguhin (₱)</th>
+            <th>Aksyon</th>
+          </tr>
+          <tr>
+            <td>Kamatis</td>
+            <td id="admin-price-kamatis">₱40.00 / kg</td>
+            <td><input type="number" class="admin-input" id="input-price-kamatis" placeholder="ex. 45"></td>
+            <td><button class="btn-update" onclick="updatePrice('kamatis', '/ kg')">Update</button></td>
+          </tr>
+          <tr>
+            <td>Pechay</td>
+            <td id="admin-price-pechay">₱30.00 / tali</td>
+            <td><input type="number" class="admin-input" id="input-price-pechay" placeholder="ex. 35"></td>
+            <td><button class="btn-update" onclick="updatePrice('pechay', '/ tali')">Update</button></td>
+          </tr>
+          <tr>
+            <td>Siling Panigang</td>
+            <td id="admin-price-sili">₱80.00 / kg</td>
+            <td><input type="number" class="admin-input" id="input-price-sili" placeholder="ex. 85"></td>
+            <td><button class="btn-update" onclick="updatePrice('sili', '/ kg')">Update</button></td>
+          </tr>
+          <tr>
+            <td>Suka, Toyo, Patis</td>
+            <td id="admin-price-trinity">₱45.00 / set</td>
+            <td><input type="number" class="admin-input" id="input-price-trinity" placeholder="ex. 50"></td>
+            <td><button class="btn-update" onclick="updatePrice('trinity', '/ set')">Update</button></td>
+          </tr>
+        </table>
+      </div>
+
+      <h3 style="margin-top: 20px;">2. Mga Omoorder (Live Feed)</h3>
+      <div class="table-responsive">
+        <table class="admin-table">
+          <tr>
+            <th>Order ID</th>
+            <th>Pangalan</th>
+            <th>Address</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>#GB-001</td>
+            <td>Kuya wil</td>
+            <td>Brgy. Ligaya</td>
+            <td>1x Kamatis, 2x Pechay</td>
+            <td>₱100.00</td>
+            <td style="color: orange; font-weight: bold;">Paghahanda</td>
+          </tr>
+          <tr>
+            <td>#GB-002</td>
+            <td>jaycob</td>
+            <td>Brgy. North Poblacion</td>
+            <td>1x Suka, Toyo, Patis</td>
+            <td>₱45.00</td>
+            <td style="color: green; font-weight: bold;">On the way</td>
+          </tr>
+          <tr>
+            <td>#GB-003</td>
+            <td>angkol</td>
+            <td>Brgy. Pinamalisan</td>
+            <td>1x Siling Panigang</td>
+            <td>₱80.00</td>
+            <td style="color: blue; font-weight: bold;">Delivered</td>
+          </tr>
+          <tr>
+            <td>#GB-004</td>
+            <td>raymart</td>
+            <td>Brgy. Cuyapa</td>
+            <td>1x Siling Panigang</td>
+            <td>₱80.00</td>
+            <td style="color: rgb(17, 93, 17); font-weight: bold;">Delivered</td>
+          </tr>
+          <tr>
+            <td>#GB-005</td>
+            <td>clarence</td>
+            <td>Brgy. South Poblacion</td>
+            <td>1x Siling Panigang</td>
+            <td>₱80.00</td>
+            <td style="color: rgba(138, 54, 163, 0.566); font-weight: bold;">Delivered</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentLang = 'fil';
+    
+    function toggleLang() {
+      currentLang = currentLang === 'fil' ? 'en' : 'fil';
+      
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.fil;
+      });
+
+      const searchInput = document.getElementById('searchInput');
+      if(searchInput) {
+        searchInput.placeholder = currentLang === 'en' ? 'Search products...' : 'Maghanap ng paninda...';
+      }
+    }
+
+    function openAdminLogin() {
+      document.getElementById('adminModal').style.display = 'flex';
+    }
+
+    function closeAdminLogin() {
+      document.getElementById('adminModal').style.display = 'none';
+      document.getElementById('adminUser').value = '';
+      document.getElementById('adminPass').value = '';
+    }
+
+    function verifyAdmin() {
+      const user = document.getElementById('adminUser').value;
+      const pass = document.getElementById('adminPass').value;
+
+      if (user === 'admin_gabaldon' && pass === 'pabili_admin_2026') {
+        closeAdminLogin();
+        document.getElementById('main-content').style.display = 'none';
+        document.getElementById('admin-dashboard').style.display = 'block';
+        window.scrollTo(0, 0);
+      } else {
+        alert('Hindi ka Admin no? Mali password e.');
+      }
+    }
+
+    function logoutAdmin() {
+      document.getElementById('admin-dashboard').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function updatePrice(itemKey, unit) {
+      const inputEl = document.getElementById('input-price-' + itemKey);
+      const newPriceValue = inputEl.value;
+
+      if(newPriceValue.trim() === '') {
+        alert('Ilagay ang bagong presyo bago i-update.');
+        return;
+      }
+
+      const formattedNumber = parseFloat(newPriceValue).toFixed(2);
+      const formattedPrice = '₱' + formattedNumber + ' ' + unit;
+      
+      document.getElementById('admin-price-' + itemKey).innerText = formattedPrice;
+      document.getElementById('display-price-' + itemKey).innerText = formattedPrice;
+      
+      inputEl.value = '';
+      alert('Nabago na ang presyo!');
+    }
+  </script>
+
+</body>
+</html>
